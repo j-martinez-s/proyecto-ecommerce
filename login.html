@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+
+</head>
+
+<body id="logBody" class="logBody">
+  <main class="text-center">
+    <div class="container">
+      <div class="row pt-5">
+        <div class="loginsector mx-auto my-auto shadow p-3 bg-body-tertiary rounded" id="login">
+          <h3 class="text-white pb-2">Iniciar sesión</h3>
+          <hr class="w-100 mb-3 text-white">
+          </hr>
+          <form class="needs-validation" novalidate id="formLog">
+            <div class="form-floating mb-3 blackText">
+              <input type="email" class="form-control" id="email" placeholder="" required>
+              <label for="floatingEmail">Correo</label>
+              <div class="invalid-feedback">
+                Debe completar el campo.
+              </div>
+            </div>
+            <div class="form-floating mb-2 blackText">
+              <input type="password" class="form-control mb-4" id="password" placeholder="" required>
+              <label for="floatingPassword">Contraseña</label>
+              <div class="invalid-feedback">
+                Debe completar el campo.
+              </div>
+              <button type="submit" id="logBtn" class="btn logBtn mb-1 w-50"> Iniciar sesión</button>
+              <div class="alert alert-danger text-center" id="debeRegistrarse" style="position: fixed; top: 10%; display: none;"> <use xlink:href="#exclamation-triangle-fill"/>
+                ¡Para ingresar debe registrarse! 
+              </div>
+            </div>
+          </form>
+          <hr class="w-100 mb-3 text-white">
+          </hr>
+          <p class="text-white">¿No tienes una cuenta? <a href="registro.html">Crear cuenta</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/login.js"></script>
+  <script src="js/global-script.js"></script>
+  <script src="js/general-validation.js"></script>
+</body>
+
+</html>

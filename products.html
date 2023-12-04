@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body data-bs-theme="light" class="lightBg">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <div class="dropdown me-3"> <!--Dropdown-->
+            <button class="btn btn-secondary dropdown-toggle bg-dark border-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <a id="dataUsuario"></a>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #757575;"></i> Carrito</a></li>
+              <li><a class="dropdown-item" href="my-profile.html"><i class="fa-solid fa-user" style="color: #757575;"></i>  Perfil</a></li>
+              <li class="dropdown-item"><i class="fa-solid fa-droplet" style="color: #757575;"></i>  Modo<input type="checkbox" id="darkMode" onclick="enableDarkMode()"></li>
+              <li><a class="dropdown-item" id="cerrarsesion" href="login.html"><i class="fa-solid fa-right-from-bracket" style="color: #757575;"></i> Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container mt-5">
+        <div class="row">
+          <div class="col-12">
+            <h1>Productos</h1>
+            <p>Veras aquí todos los productos de la categoria <span id="category-title"></span>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col text-end">
+            <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+              <input type="radio" class="btn-check" name="options" id="sortAscPrice">
+              <label class="btn" for="sortAscPrice"><i class="fa-solid fa-arrow-up-1-9" style="color: #000000;"></i></label>
+              <input type="radio" class="btn-check" name="options" id="sortDescPrice">
+              <label class="btn" for="sortDescPrice"><i class="fa-solid fa-arrow-down-9-1" style="color: #000000;"></i></label>
+              <input type="radio" class="btn-check" name="options" id="sortProdCount" checked>
+              <label class="btn" for="sortProdCount">Relevancia  <i class="fa-sharp fa-solid fa-chart-simple" style="color: #000000;"></i></i></label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10 offset-lg-3 col-md-12 mb-5 container"> 
+            <div class="row container p-0 m-0">
+              <div class="col col-md-4">
+                <div>
+                  <input type="search" id="searchV" class="form-control border border-2" placeholder="Buscar...."/>
+                </div>
+              </div>
+              <div class="col">
+                <p class="font-weight-normal text-end my-2">Precio</p>
+              </div>
+              <div class="col">
+                <input class="form-control border border-2" type="number" placeholder="min." id="rangeFilterPriceMin">
+              </div>
+              <div class="col">
+                <input class="form-control border border-2" type="number" placeholder="máx." id="rangeFilterPriceMax">
+              </div>
+              <div class="col-lg-3 col-auto p-0">
+                <div class="btn-group" role="group">
+                  <button class="btn btn-block" id="rangeFilterPrice">Filtrar</button>
+                  <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="list-group" id="product-list-container">
+          </div>
+        </div>
+      </div>
+        <div id="products-list" class="row">
+        </div>
+        <div class="bg-light d-none"></div>
+    </div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/global-script.js"></script>
+  <script src="https://kit.fontawesome.com/8b0c408001.js" crossorigin="anonymous"></script>
+  <script src="js/selected-product.js"></script>
+  <script src="js/general-validation.js"></script>
+  <script src="js/login-verif.js"></script>
+</body>
+
+</html>

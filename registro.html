@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+
+</head>
+
+<body class="logBody">
+  <main class="text-center">
+    <div class="container">
+      <div class="row pt-4">
+        <div class="loginsector mx-auto my-auto shadow p-3 bg-body-tertiary rounded w-75">
+          <h3 class="text-white pb-2">Registro</h3>
+          <hr class="w-100 mb-3 text-white">
+          </hr>
+          <form class="row g-3 text-white text-start needs-validation" id="formReg" novalidate>
+            <div class="col-md-6">
+              <label for="inputUser" class="form-label">Nombre de usuario:</label>
+              <input type="text" class="form-control" id="newUsername" required>
+              <div class="invalid-feedback">
+                Debe completar el campo.
+               </div>
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail" class="form-label">Correo:</label>
+              <input type="email" class="form-control" id="newEmail" required>
+              <div class="invalid-feedback">
+                Debe completar el campo.
+               </div>
+            </div>
+            <div class="col-12">
+              <label for="inputPassword" class="form-label password">Contraseña:</label>
+              <input type="password" class="form-control newPassword" id="newPassword" required>
+              <div class="invalid-feedback">
+                Debe completar el campo.
+               </div>
+            </div>
+            <div class="col-12">
+              <label for="inputPassword2" class="form-label">Repetir contraseña:</label>
+              <input type="password" class="form-control password-repeat newPassword2" id="newPassword2" required>
+              <div class="invalid-feedback">
+                Las contraseñas deben coincidir.
+               </div>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-light logBtn mb-3" id="regBtn"> Registrarme</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/register.js"></script>
+  <script src="js/general-validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+.jumbotron,
+.card-body,
+.container,
+.site-header {
+  font-family: 'Verdana', serif !important;
+}
+
+.jumbotron .display-4 {
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.jumbotron {
+  height: 50vh;
+  padding: 5em inherit;
+  margin-bottom: 0;
+  background-color: #53C0FB;
+  background: url('../img/cover_back.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px grey;
+}
+
+.jumbotron .lead {
+  font-size: 38px;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.site-header a {
+  color: white;
+  transition: ease-in-out color .15s;
+}
+
+.site-header .dropdown-menu a {
+  color: black;
+}
+
+.dropzone {
+  border: 2px dashed #0087F7;
+  border-radius: 5px;
+  background: white;
+}
+
+.img-fit {
+  max-height: 100%;
+}
+
+.alert {
+  position: fixed;
+  top: 80px;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  top: 50%;
+  left: 50%;
+}
+
+.cursor-active {
+  cursor: pointer;
+}
+
+.left {
+  float: left;
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+#spinner-wrapper {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1021;
+  display: none;
+}
+
+main {
+  min-height: calc(100vh - 210px);
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.checked {
+  color: orange;
+}
+
+/* css del producto no encontrado */
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size:2vw;
+  color: #5c5c5c;
+  min-height: 64vh; 
+}
+
+/* css del buscador de productos */
+
+#searchV {
+  width: 20em;
+}
+
+/* css publicar comentario*/
+
+#commentInput {
+  width: 600px;
+}
+
+.regularButton {
+  background-color: #212529;
+  color: white;
+  border-radius: 2em;
+  height: 43px;
+  width: 90px;
+  margin-top: 10px;
+}
+
+.regularButton:hover {
+  background-color: #f09100;
+  border-color: #f09100;
+  color: white;
+  border-radius: 2em;
+}
+
+#puntaje {
+  border-radius: 2em;
+}
+
+#commentInput {
+  border-radius: 1em;
+}
+
+#comment {
+  margin-top: 0;
+  margin-bottom: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border: 1em;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 1);
+  border-radius: 1em;
+  zoom: 85%;
+}
+
+#tituloComments {
+margin-top: 50px;
+margin-left: 15px;
+margin-bottom: 25px;
+}
+
+/*Carousel de imagenes */
+
+#carouselContainer{
+margin-top: 30px;
+width: 700px;
+}
+
+.carousel-inner {
+width: 700px;
+}
+
+
+/*Modo oscuro*/ 
+
+#darkMode {
+  float: right;
+  margin-right: 15px;
+  position:relative;
+  width: 44px;
+  height: 20px;
+  background-color: #757575;
+  appearance: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+#darkMode:checked {
+background-color: #6eb6f1;
+}
+
+#darkMode::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.7s ease;
+}
+
+#darkMode:checked::before {
+transform: translateX(23px);
+}
+
+/*Rediseño Login*/
+
+.logBody{
+  background-image: url("https://getwallpapers.com/wallpaper/full/4/3/1/668659.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  }
+  
+  .loginsector{
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .form-control{
+    background-color: rgba(255, 255, 255, 0.372);
+
+  }
+
+  .blackText{
+    color: #1f2483;
+    }
+
+  .logBtn{
+    background-color: #212529;
+    color: white;
+    border-radius: 2em;
+    height: 43px;
+    width: 150px;
+    margin-top: 10px;
+  }
+
+  .logBtn:hover{
+    background-color: #485058;
+  }
+
+/*Dispositivos XS*/
+
+@media only screen and (max-width: 575.98px){
+  .container{
+    width: 100%;
+    height: 100%;
+  }
+  #carouselContainer{
+    width: 100%;
+    height: 100%;
+  }
+  #commentInput{
+    width: 100%;
+    height: 100%;
+  }
+  .jumbotron{ 
+    background-size: 250%;
+    background-position: left;
+    background-position: 19%;
+    height: 35vh;
+  } 
+}
+
+/*Dispositivos MD*/
+
+@media only screen and (min-width: 768px){
+  .jumbotron{ 
+    background-size: 160%;
+    height: 35vh;
+    background-position: left;
+    background-position: 20%;
+  }
+}
+
+/*Dispositivos LG*/ 
+
+@media only screen and (min-width: 992px){
+  .jumbotron{ 
+    background-size: 100%;
+    height: 50vh;
+  } 
+}
+
+/*Validación de form*/ 
+
+.is-invalid {
+  color: #e1001f;
+}
+
+.btnEliminar {
+  background-color: transparent;
+  border: 2px solid #f55151;
+  border-radius: 10px;
+  padding: 5px 8px;
+}
+
+.lightBg{
+  background-image: url("https://images.unsplash.com/photo-1541075217473-93119871682d?auto=format&fit=crop&q=80&w=1759&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  color:#212529;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.darkBg{
+  background-image: url("https://img.freepik.com/premium-photo/realistic-haunted-forest-landscape-night-fantasy-halloween-forest-background-3d-illustration_598586-1340.jpg?w=1060");
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.profilePicture{
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border: 2px solid #67676771;
+  border-radius: 100px;
+}
+
+.ellipsis{
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
